@@ -99,7 +99,6 @@ class ExportController extends Controller
     {
         $companies = Company::all();
 
-        // Return a view designed for printing
         return view('print.export', compact('companies'));
     }
 }
