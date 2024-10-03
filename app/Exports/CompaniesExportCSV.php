@@ -5,7 +5,7 @@ namespace App\Exports;
 use App\Models\company;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class CompaniesExport implements FromCollection
+class CompaniesExportCSV implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
