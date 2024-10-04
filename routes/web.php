@@ -32,3 +32,5 @@ Route::get('/export-csv', [ExportController::class, 'exportCsv'])->name('export.
 Route::get('/companies/print', [ExportController::class, 'print'])->name('print');
 
 Route::get('/export-excel', [ExportController::class, 'exportExcel'])->name('export.excel');
+
+Route::get('/companies', [ExportController::class, 'getCompaniesData'])->name('companies.data');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -100,5 +101,14 @@ class ExportController extends Controller
         $companies = Company::all();
 
         return view('print.export', compact('companies'));
+    }
+
+    public function getCompaniesData()
+    {
+        $companies = Company::all();
+
+        $com = compact('companies');
+
+        return view('company', $com);
     }
 }
